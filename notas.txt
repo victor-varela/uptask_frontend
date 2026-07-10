@@ -1,0 +1,26 @@
+npm create vite@latest    → genera TODA la estructura del proyecto (carpetas, 
+                             componentes, config) — no solo el package.json
+
+npm install                → lee el package.json y descarga las dependencias 
+                             listadas a node_modules
+Relación con el backend:
+Backend                          Frontend
+────────────────────────────────────────────────────────
+npm init -y                      npm create vite@latest
+→ hoja en blanco                 → plantilla lista con andamiaje
+
+npm install <paquete>            (mismo comando, mismo efecto)
+→ agrega la dependencia          
+  automáticamente al 
+  package.json + la descarga
+  a node_modules
+  
+Lo clave para recordar:
+El package.json casi nunca se edita a mano — cada npm install <algo> lo modifica solo, agregando esa línea a dependencies o devDependencies. La única excepción real fue el bloque "scripts", que sí escribiste vos manualmente en el backend para definir el comando dev.
+Es el mismo patrón en los dos mundos: el archivo describe qué necesita el proyecto, node_modules es donde realmente vive ese código descargado.
+
+1- Limpiamos el scaffolding de vite
+
+2- Instalamos tailwindcss (lo hice siguiendo la documentacion de la pag de tailwindcss.. al 10-07-26) OJOOO EL PROFE USO tailwindcss VERSION 3 PORQUE COMPARTE UNOS componentes que usan esa version, puede haber conflictos mas adelante.. divino!
+
+3- Instalamos react-router-dom y Creamos el ROUTER: al igual que en el backend creo que el router es el que mueve la pelota es lo que anima la app, es el DIRECTOR. El router recibe las peticiones y activa la app. Lo hacemos en src/ router.tsx
