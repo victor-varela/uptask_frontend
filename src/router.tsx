@@ -8,7 +8,7 @@ export default function Router() {
       <Routes>
         {/* Esta ruta tiene AppLayout | Esta ruta tiene el rol de agrupar a pesar que es Route-singular */}
         <Route element={<AppLayout />}>
-          {/* Cuando visite / renderiza DashboardView que es index */}
+          {/* Cuando visite '/' renderiza DashboardView que es index */}
           <Route path="/" element={<DashboardView />} index />
         </Route>
       </Routes>

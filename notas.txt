@@ -24,3 +24,4 @@ Es el mismo patrón en los dos mundos: el archivo describe qué necesita el proy
 2- Instalamos tailwindcss (lo hice siguiendo la documentacion de la pag de tailwindcss.. al 10-07-26) OJOOO EL PROFE USO tailwindcss VERSION 3 PORQUE COMPARTE UNOS componentes que usan esa version, puede haber conflictos mas adelante.. divino!
 
 3- Instalamos react-router-dom y Creamos el ROUTER: al igual que en el backend creo que el router es el que mueve la pelota es lo que anima la app, es el DIRECTOR. El router recibe las peticiones y activa la app. Lo hacemos en src/ router.tsx
+4- Damos estilos a AppLayout, vemos que el logo lo vamos a usar en varias vistas por eso lo hacemos un componente. Tienes las referencias_ui.
