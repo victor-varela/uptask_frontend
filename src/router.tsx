@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppLayout } from "./Layouts/AppLayout";
 import DashboardView from "./Views/DashboardView";
+import CreateProjectView from "./Views/CreateProjectView";
 
 export default function Router() {
   return (
@@ -8,8 +9,10 @@ export default function Router() {
       <Routes>
         {/* Esta ruta tiene AppLayout | Esta ruta tiene el rol de agrupar a pesar que es Route-singular */}
         <Route element={<AppLayout />}>
-          {/* Cuando visite '/' renderiza DashboardView que es index */}
+          {/* Cuando visite '/' renderiza DashboardView que es index-hay un solo indice por grupo de rutas- */}
           <Route path="/" element={<DashboardView />} index />
+          {/* Cuando visite '/projects/create' renderiza CreateProjectView */}
+          <Route path="/projects/create" element={<CreateProjectView/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
@@ -41,6 +44,8 @@ export default function Router() {
 
 
  * Este Router lo llamamos en main.tsx | ahi empieza el juego.
+ * 
+ * La pelota SIEMPRE VIENE POR ACA: Empieza el CRUD- en ese orden. Primero CREAR- Esta app administra Proyectos (que tienen tareas) 
  * 
  *
  *
