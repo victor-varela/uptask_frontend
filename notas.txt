@@ -25,3 +25,6 @@ Es el mismo patrón en los dos mundos: el archivo describe qué necesita el proy
 
 3- Instalamos react-router-dom y Creamos el ROUTER: al igual que en el backend creo que el router es el que mueve la pelota es lo que anima la app, es el DIRECTOR. El router recibe las peticiones y activa la app. Lo hacemos en src/ router.tsx
 4- Damos estilos a AppLayout, vemos que el logo lo vamos a usar en varias vistas por eso lo hacemos un componente. Tienes las referencias_ui.
+- Para evitar colocar ../../../ en las importaciones - los 'imports' instalamos y configuramos una dependencia de desarrollo de node--> node:url en vite.config.ts y ts.config.app.json hacemos unos cambios para reemplazar los imports que empiecen con ../ por @ es decir cuando veas @ le mandamos a buscar en src y la carpeta correspondiente... es medio embole pero supuestamente para mayor orden. Para instalar es npm i -D @types/node. A esto se le conoce como PATH ALIASES
+5- Instalamos headlessui y heroicons para los estilos y componentes que nos da el profesor ej menu hamburguesa en AppLayout: npm i @headlessui/react @heroicons/react
+6- Guardamos el gist en components/NavMenu
