@@ -1,9 +1,10 @@
 import ProjectForm from "@/components/projects/ProjectForm";
+import type { ProjectFormData } from "@/types";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 export default function CreateProjectView() {
   //Instanciamos react-hook-form / lo iniciamos con defaultValues
-  const initialValues = {
+  const initialValues:ProjectFormData = {
     projectName: "",
     clientName: "",
     description: "",
@@ -15,7 +16,7 @@ export default function CreateProjectView() {
   } = useForm({ defaultValues: initialValues });
 
   //Nuestra funcion de validacion-> se la pasamos a handleSubmit del hookForm que esta en el onSUbmit
-  const handleForm = data => {
+  const handleForm = (data:ProjectFormData) => {
     console.log(data);
   };
   return (

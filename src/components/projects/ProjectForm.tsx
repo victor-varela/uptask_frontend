@@ -1,17 +1,10 @@
+import type { ProjectFormData } from "@/types";
 import ErrorMessage from "../ErrorMessage";
 import type { FieldErrors, UseFormRegister } from "react-hook-form";
 
 type ProjectFormProps = {
-  errors: FieldErrors<{
-    projectName: string;
-    clientName: string;
-    description: string;
-  }>;
-  register: UseFormRegister<{
-    projectName: string;
-    clientName: string;
-    description: string;
-  }>;
+  errors: FieldErrors<ProjectFormData>;
+  register: UseFormRegister<ProjectFormData>;
 };
 
 //Usamos intellisense de VsCode, hovereamos en register y errors en CreateProjectView y tenemos su TYPE- tenemos que importar igualmente esos types de react-hook-form para que los reconozca TS.
@@ -71,3 +64,27 @@ export default function ProjectForm({ errors, register }: ProjectFormProps) {
     </>
   );
 }
+
+/**
+ * 
+type ProjectFormProps = {
+  errors: FieldErrors<ProjectFormData>;
+  register: UseFormRegister<ProjectFormData>;
+};
+ * Esto antes tenia en el generic <  > los campos y el type de cada uno que se obtiene de hoverear en errors y register... los types FieldErrors y UseFormRegister se MANTIENEN porque son de hook-form y se importan en este archivo pero el generic ya es de NUESTRO TYPE el ProjectFormData que creamos para evitar la repeticion y los any en la APP. 
+ * 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ */
